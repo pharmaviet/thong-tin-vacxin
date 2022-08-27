@@ -4,7 +4,7 @@ CsvToHtmlTable = {
     init: function (options) {
         options = options || {};
         var csv_path = options.csv_path || "";
-        var el = options.element || "table-container";
+        var el = options.element || "test";
         var allow_download = options.allow_download || false;
         var csv_options = options.csv_options || {};
         var datatables_options = options.datatables_options || {};
