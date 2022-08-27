@@ -85,7 +85,23 @@
                 delimiter: '"'
             },
             datatables_options: {
-                paging: false
+                lengthMenu: [
+            [ 10, 25, 50,100, -1 ],
+            [ '10', '25', '50','100', 'All' ]
+        ],
+      
+            select: 'single',
+            ordering: true,
+            pagingType: "full_numbers",
+            responsive: true,
+  
+      // 
+       dom: 
+            // "<'row'<'col-md-3 table-filter-container'>>" +
+            "<'row'<'form control col-md-4'l><'form control col-md-3'f>>" +
+            "<'row'<'col-md-12'tr>>" +
+            "<'row'<'col-md-5'i><'col-md-7'p>>",
+           
             },
             custom_formatting: [
                 [13, format_link],
