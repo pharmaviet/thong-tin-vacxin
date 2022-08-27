@@ -44,7 +44,7 @@
            
          </header> 
 
-                <div id="table-container" class="table table-striped nowrap" style="width:100%;background-color:#ffffff"></div>
+                <div id="test" class="table table-striped nowrap" style="width:100%;background-color:#ffffff"></div>
             </div>
         </main>
         <footer class="row">
@@ -78,7 +78,7 @@
 
         CsvToHtmlTable.init({
             csv_path: "data/Data.csv",
-            element: "table-container",
+            element: "test",
             allow_download: true,
             csv_options: {
                 separator: ",",
@@ -144,7 +144,7 @@ function format(d) {
 }
  
 $(document).ready(function () {
-    var table = $('#example').DataTable({
+    var table = $('#test').DataTable({
         ajax: '../ajax/data/objects.txt',
         columns: [
             {
@@ -162,7 +162,7 @@ $(document).ready(function () {
     });
  
     // Add event listener for opening and closing details
-    $('#example tbody').on('click', 'td.dt-control', function () {
+    $('#test tbody').on('click', 'td.dt-control', function () {
         var tr = $(this).closest('tr');
         var row = table.row(tr);
  
