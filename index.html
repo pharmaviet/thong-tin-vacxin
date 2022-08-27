@@ -54,6 +54,11 @@
                 return '<img src="' + link + '" class="avatar" width="400" height="300" /></a>'; 
             else return "";
         }
+         function format_text(text) {
+            if (text)
+                return "<div id='dvNotes' style='white-space: normal;width: auto;'>" + text + "</div>";
+            else return "";
+        }
 
         CsvToHtmlTable.init({
             csv_path: "data/Data.csv",
@@ -68,6 +73,9 @@
             },
             custom_formatting: [
                 [13, format_link]
+            ],
+            custom_formatting: [
+                [6, format_text]
             ]
         });
     </script>
