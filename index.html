@@ -144,7 +144,7 @@ function format(d) {
 }
  
 $(document).ready(function () {
-    var table = $('#test').DataTable({
+    var table = $('test').DataTable({
         ajax: '../ajax/data/objects.txt',
         columns: [
             {
@@ -162,7 +162,7 @@ $(document).ready(function () {
     });
  
     // Add event listener for opening and closing details
-    $('#test tbody').on('click', 'td.dt-control', function () {
+    $('test tbody').on('click', 'td.dt-control', function () {
         var tr = $(this).closest('tr');
         var row = table.row(tr);
  
