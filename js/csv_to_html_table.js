@@ -51,6 +51,21 @@ CsvToHtmlTable = {
                 $table.append($tableBody);
 
                 $table.DataTable(datatables_options);
+                // Add event listener for opening and closing details
+    $('#test tbody').on('click', 'td.dt-control', function () {
+        var tr = $(this).closest('tr');
+        var row = table.row(tr);
+ 
+        if (row.child.isShown()) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        } else {
+            // Open this row
+            row.child(format(row.data())).show();
+            tr.addClass('shown');
+        }
+    });
 
                 if (allow_download) {
                     $containerElement.append("<p><a class='btn btn-info' href='" + csv_path + "'><i class='glyphicon glyphicon-download'></i> Download as CSV</a></p>");
