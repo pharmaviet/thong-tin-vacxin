@@ -16,7 +16,7 @@ CsvToHtmlTable = {
             customTemplates[colIdx] = func;
         });
 
-        var $table = $("<table class='table table-striped' id='" + el + "-table'></table>");
+        var $table = $("<table class='table table-striped display nowrap' id='" + el + "-table'></table>");
         var $containerElement = $("#" + el);
         $containerElement.empty().append($table);
 
